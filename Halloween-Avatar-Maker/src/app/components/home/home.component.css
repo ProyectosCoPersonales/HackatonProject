@@ -1,0 +1,272 @@
+.content-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: url("https://springstorage.blob.core.windows.net/images/principal.webp") center top no-repeat;
+  background-size: contain;
+  position: relative;
+  flex-direction: column;
+  width: auto;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .content-header {
+    height: auto;
+  }
+}
+
+.content-secundary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.text-wrapper {
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: spookyBlink 1s infinite;
+
+}
+
+@keyframes spookyBlink {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    opacity: 1;
+  }
+
+  30%,
+  60%,
+  90% {
+    opacity: 0;
+  }
+}
+
+h1 {
+  font-family: 'man', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 150px;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Tallow', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 62px;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 25vh;
+}
+
+.box1 p {
+  color: white;
+  font-family: 'Tallow', sans-serif;
+  font-size: 45px;
+  font-weight: 200;
+  line-height: 1.8;
+  letter-spacing: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .box {
+    flex: 1 1 100%;
+    max-width: 100%;
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+
+}
+@media (max-width: 1000px) {
+  .box1 p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .box1 p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .box {
+    width: 1500px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .box {
+    width: 2000px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  app-banner1,
+  app-banner2 {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+
+  app-banner1,
+  app-banner2 {
+    display: none;
+  }
+}
+.content-block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 400px;
+  align-items: center;
+  margin-top: 50px;
+}
+.content-container{
+
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.block1 .image-side {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.block1 .text-side {
+  color: aliceblue;
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  padding-right: 50px; 
+  font-size: 30px;
+  padding: 10px; 
+  font-family: 'Tallow', sans-serif;
+}
+
+
+.content-block > div {
+  padding: 0; 
+}
+
+.image-side img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-block {
+  margin: -10px 0; 
+}
+
+
+a {
+  display: inline-block;
+  text-align: center;
+  font-family: 'man',sans-serif;
+  margin: 0 auto;
+  text-decoration: none;
+  background-color: aliceblue;
+  color: #000000;
+  font-size: 40px;
+  width: 350px;
+  padding: 10px 0;
+  border: 1px solid transparent;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #686868;
+  color: aliceblue;
+}
+.full-width-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 900px;
+  flex-direction: column;
+  height: 900px;
+  margin: 0 auto; 
+}
+
+h2 {  
+  color: #fff;  
+  font-size: 5em;  
+  font-weight: 600;  
+  padding: 0; 
+  margin-bottom: 30px;
+  margin-top: 10px;
+  font-family: 'Edo', sans-serif;
+  text-align: center; 
+}  
+
+h2 span {  
+  font-family: 'Edo', sans-serif;  
+  position: relative;  
+  color: rgba(255, 255, 255, 0.1);  
+  animation: displayText 9s infinite;  
+  animation-delay: calc(-3s * var(--i));  
+}  
+
+@keyframes displayText {  
+  0% {  
+    display: inline-block;  
+  }  
+  33.33%, 100% {  
+    display: none;  
+  }  
+}
+
+h2 span::before {  
+  content: attr(data-text);  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  color: #ffe100;  
+  overflow: hidden;  
+  border-right: 4px solid #ffd256;  
+  filter: drop-shadow(0 0 5px #fe8801) drop-shadow(0 0 25px #fe9001);  
+  animation: animate 3s linear infinite;  
+}  
+
+@keyframes animate {  
+  0%, 10% {  
+    width: 0;  
+  }  
+  70%, 90% {  
+    width: 100%;  
+  }  
+}

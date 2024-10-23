@@ -1,0 +1,27 @@
+<div class="bottom-bar">
+  <button (click)="disminuirTamano()" aria-label="Disminuir">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24">
+      <g fill="none" stroke="white" stroke-width="2">
+        <path d="M16 10a6 6 0 1 1-12 0a6 6 0 0 1 12 0Z" />
+        <path stroke-linecap="round" d="m20 20l-5-5m-7.5-5h5" />
+      </g>
+    </svg>
+  </button>
+
+  <button (click)="aumentarTamano()" aria-label="Aumentar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1rem" height="1rem" viewBox="0 0 24 24">
+      <path fill="white"
+        d="M13.5 10a.75.75 0 0 0-.75-.75h-2v-2a.75.75 0 0 0-1.5 0v2h-2a.75.75 0 1 0 0 1.5h2v2a.75.75 0 0 0 1.5 0v-2h2a.75.75 0 0 0 .75-.75M10 2.75a7.25 7.25 0 0 1 5.63 11.819l4.9 4.9a.75.75 0 0 1-.976 1.134l-.084-.073l-4.901-4.9A7.25 7.25 0 1 1 10 2.75m0 1.5a5.75 5.75 0 1 0 0 11.5a5.75 5.75 0 0 0 0-11.5" />
+    </svg>
+  </button>
+  <button (click)="goHome()" style="font-size: 25px; color: aliceblue; font-weight: 300; font-family: 'Tallow', sans-serif;">
+    SALIR
+</button>
+
+  <button (click)="descargar()"
+    style="font-size: 25px; color: aliceblue; font-weight: 300; font-family: 'Tallow',sans-serif;">GUARDAR</button>
+  <input type="text" [(ngModel)]="fileName" placeholder="Nombre del archivo" />
+  <button (click)="putOriginal()"
+    style="font-size: 25px; color: aliceblue; font-weight: 300; font-family: 'Tallow',sans-serif;">REVERTIR
+    CAMBIOS</button>
+</div>

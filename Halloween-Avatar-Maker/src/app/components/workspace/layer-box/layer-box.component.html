@@ -1,0 +1,43 @@
+<div class="layer-box">
+  <h1 style="font-family: 'Tallow', sans-serif; text-align: center; font-size: 30px; color: aliceblue;">CAMBIAR</h1>
+  <div class="background-selector">
+    <label for="backgroundSelect" style="text-align: center; font-size: 30px; color: aliceblue;">Fondo</label>
+    <select id="backgroundSelect" (change)="onBackgroundSelect($event)">
+      <option value="">Seleccionar...</option>
+      <option value="bosque_tenebroso">Bosque Tenebroso</option>
+      <option value="bosque_encantado">Bosque Encantado</option>
+      <option value="fabrica">Fábrica Abandonada</option>
+      <option value="castillo">Castillo</option>
+      <option value="mar">Mar Abandonado</option>
+      <option value="puente">Puente Roto</option>
+      <option value="cementerio_animales">Cementerio de Animales</option>
+      <option value="casa_abandonada">Casa Abandonada</option>
+      <option value="cueva_oscura">Cueva Oscura</option>
+      <option value="cementerio_abandonado">Cementerio Abandonado</option>
+    </select>
+  </div> 
+  <h1 style="font-family: 'Tallow', sans-serif; text-align: center; font-size: 25px; color: aliceblue;">Ratio</h1>
+ 
+  
+  <div class="button-container">
+    <button (click)="changeAspectRatio('1:1')" class="ratio-button">1:1</button>
+    <button (click)="changeAspectRatio('1:2')" class="ratio-button">1:2</button>
+    <button (click)="changeAspectRatio('5:2')" class="ratio-button">5:2</button>
+  </div>
+  <h1 style="font-family: 'Tallow', sans-serif; text-align: center; font-size: 25px; color: aliceblue;">Optimizar</h1>
+ 
+  <div class="optimization-buttons">
+    <button (click)="optimizeImage('720p')" class="optimization-button">720p</button>
+    <button (click)="optimizeImage('1080p')" class="optimization-button">1080p</button>
+    <button (click)="optimizeImage('4K')" class="optimization-button">4K</button>
+  </div>
+
+  <h1 style="font-family: 'Tallow', sans-serif; text-align: center; font-size: 25px; color: aliceblue;">Relleno Generativo</h1>
+  <div class="button-container">
+    <button (click)="changeAspectRatiowithFill('1:1')" class="ratio-button">1:1</button>
+    <button (click)="changeAspectRatiowithFill('4:3')" class="ratio-button">4:3</button>
+    <button (click)="changeAspectRatiowithFill('3:4')" class="ratio-button">3:4</button>
+  </div>
+
+  
+</div>

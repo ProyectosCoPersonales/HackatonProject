@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="top-container">
+    <app-menu-bar [imagenUrlOriginal]="imagenUrlOriginal" (imageUpdated)="updateImageUrl($event)"></app-menu-bar>
+    <div #resizableContainer class="resizable-container" (wheel)="onScroll($event)" (mousedown)="startDragging($event)">
+      <div class="resizable-content"
+        [ngStyle]="{'transform': 'scale(' + scaleFactor + ')', 'transform-origin': 'center'}">
+        <img [src]="imageUrlToShow" alt="Imagen editable" class="image-content">
+        <div *ngIf="isLoading" class="loading-overlay">
+          <p>Espere {{loadingTime}} segundos aproximadamente...</p>
+        </div>
+      </div>
+
+      <div class="zoom-indicator">
+        Zoom: {{ (scaleFactor * 100) | number:'1.0-1' }}%
+      </div>
+    </div>
+    <app-layer-box [imageUrlEdited]="imageUrlToShow" (imageUpdated)="updateImageUrl($event)"></app-layer-box>
+  </div>
+  <div *ngIf="imageDimensions" class="image-dimensions">
+    Dimensiones: {{ imageDimensions.width }} x {{ imageDimensions.height }} px
+  </div>
+  <app-bottom-bar [imagenUrlOriginal]="imagenUrlOriginal" (imageUpdated)="updateImageUrl($event)"></app-bottom-bar>
+</div>

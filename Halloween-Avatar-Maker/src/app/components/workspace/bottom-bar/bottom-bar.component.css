@@ -1,0 +1,42 @@
+.bottom-bar {
+    background-color: #3c3a37;
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: #2c2c2c;
+    border: none;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #1a1a1a;
+}
+
+button svg {
+    fill: white;
+    width: 24px;
+    height: 24px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input{
+    font-family: 'Tallow',sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+    width: 250px;
+    margin: 10px;
+    padding: 10px 10px;
+}

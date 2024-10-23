@@ -1,0 +1,47 @@
+<div class="custom-modal">
+  <div class="modal-content">
+    <div *ngIf="!isDragging && !uploadedImageUrl" class="dropzone" (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)" (drop)="handleFileInput($event)" (click)="fileInput.click()">
+      <div class="dropzone-text">
+        <h1>Haz click o suelta la imagen aquí</h1>
+      </div>
+      <input #fileInput type="file" accept="image/*" (change)="handleFileInput($event)" style="display:none;" />
+    </div>
+
+    <div *ngIf="isDragging && !uploadedImageUrl" class="drag-and-drop" (dragover)="onDragOver($event)"
+      (dragleave)="onDragLeave($event)" (drop)="onDrop($event)" [class.dragging]="isDragging">
+      <div class="dropzone-text">
+        <h1>Suelta aquí tu imagen para cargarla</h1>
+      </div>
+    </div>
+
+    <div *ngIf="uploadedImageUrl">
+      <h3>Imagen Subida:</h3>
+      <div class="url-container">
+
+        <button (click)="goHome()" class="icon-btn delete-btn">
+          <div class="icon-text">
+              <span class="icon">&lt;</span>
+              <span class="text">Regresar</span>
+          </div>
+      </button>
+      
+
+        <p class="image-url">{{ uploadedImageUrl }}</p>
+
+        <button (click)="copyToClipboard(uploadedImageUrl)" class="copy-btn">
+          <img src="https://img.icons8.com/ios-filled/50/000000/copy.png" alt="Copiar">
+        </button>
+        
+        <button (click)="goWorkspace()" class="icon-btn navigate-btn">
+          <div class="icon-text">
+            <span class="icon">&gt;</span>
+            <span class="text">Continuar</span>
+          </div>
+        </button>
+
+      </div>
+      <img [src]="uploadedImageUrl" alt="Imagen subida" style="max-width: auto; height: 400px;" />
+    </div>
+  </div>
+</div>

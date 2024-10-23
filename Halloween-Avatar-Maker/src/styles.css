@@ -1,0 +1,31 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+@font-face {
+  font-family: 'Edo';
+  src: url('./assets/fonts/edo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tallow';
+  src: url('./assets/fonts/TallowTC-Rg.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'man';
+  src: url('./assets/fonts/3rd Man.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
